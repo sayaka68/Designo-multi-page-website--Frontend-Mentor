@@ -1,0 +1,21 @@
+@use "sass:math";
+
+// @function clampVw($min, $size, $max, $vp: 1920) {
+// 	$min: $min * 0.1rem;
+// 	$max: $max * 0.1rem;
+// 	$num: 100 / $vp * 1vw;
+// 	$size_vw: $num * $size;
+// 	@return clamp($min, $size_vw, $max);
+// }
+
+// font-size: global.clampVw(8, 16, 15, 768) の形で使う
+//上の例は768pxの時の16pxを基準として最小値0.8rem 最大値1.5remとした場合
+
+@function clampVw($min, $size, $max, $vp: 1280) {
+  $min: $min * 1px;
+  $max: $max * 1px;
+  // $num: 100 / $vp * 1vw;
+  $num: math.div(100, $vp) * 1vw;
+  $size_vw: $num * $size;
+  @return clamp($min, $size_vw, $max);
+}

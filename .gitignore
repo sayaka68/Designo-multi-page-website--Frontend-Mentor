@@ -1,0 +1,47 @@
+# =========================
+# Node.js / npm
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# =========================
+# Gulp ビルド関連
+# =========================
+dist/             # 出力先（ビルド後に生成される）
+build/
+.tmp/
+.cache/
+.sass-cache/
+gulpfile.js.map
+
+# =========================
+# OS / エディタ関連
+# =========================
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# 環境ファイル
+# =========================
+.env
+.env.local
+.env.production
+.env.development
+
+# =========================
+# その他
+# =========================
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+*.swp
+*.lock

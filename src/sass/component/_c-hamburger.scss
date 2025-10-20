@@ -1,0 +1,173 @@
+@use "../global" as global;
+
+.c-hamburger {
+  position: relative;
+  height: 20px;
+  width: 24px;
+}
+
+.c-hamburger__bar {
+  width: 24px;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  background-color: var(--black);
+
+  &:first-child {
+    top: -16px;
+  }
+
+  &:last-child {
+    top: 16px;
+  }
+}
+
+@keyframes open2nd {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes openFirst {
+  0% {
+    top: -16px;
+    transform: rotate(0);
+  }
+
+  50% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes openLast {
+  0% {
+    top: 16px;
+    transform: rotate(0);
+  }
+
+  50% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes close2ed {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeFirst {
+  0% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  50% {
+    top: 0;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: -16px;
+    transform: rotate(0);
+  }
+}
+
+@keyframes closeLast {
+  0% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  50% {
+    top: 0;
+    transform: rotate(0);
+  }
+  100% {
+    top: 16px;
+    transform: rotate(0);
+  }
+}
+
+.c-hamburger.openAnim {
+  .c-hamburger__bar {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    &:nth-child(2) {
+      animation-name: open2nd;
+    }
+
+    &:first-child {
+      animation-name: openFirst;
+    }
+
+    &:last-child {
+      animation-name: openLast;
+    }
+  }
+}
+.c-hamburger.closeAnim {
+  .c-hamburger__bar {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+
+    &:nth-child(2) {
+      animation-name: close2nd;
+    }
+
+    &:first-child {
+      animation-name: closeFirst;
+    }
+
+    &:last-child {
+      animation-name: closeLast;
+    }
+  }
+}
+
+// .c-hamburger.is-checked {
+//   .c-hamburger__bar {
+//     transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+
+//     &:nth-child(2) {
+//       opacity: 0;
+//     }
+
+//     &:first-child {
+//       top: 0;
+//       transform: rotate(45deg);
+//     }
+
+//     &:last-child {
+//       top: 0;
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }

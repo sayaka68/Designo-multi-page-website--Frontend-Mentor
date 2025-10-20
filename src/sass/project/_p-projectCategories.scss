@@ -1,0 +1,71 @@
+@use "../global" as global;
+
+.p-projectCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include global.mq(md) {
+  }
+}
+
+.p-projectCategories__item {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 500;
+
+  @include global.mq(md) {
+    height: 200px;
+  }
+
+  a {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 5px;
+    background: url(../../assets/img/arrow_right_peach.svg) no-repeat center
+      right / 4px;
+    padding-right: 20px;
+  }
+
+  &.web {
+    background: url(../../assets/img/img_category_sp-min.png) no-repeat center
+      center / cover;
+    @include global.mq(md) {
+      background-image: url(../../assets/img/img_category_tb-min.png);
+    }
+
+    @include global.mq(lg) {
+      background-image: url(../../assets/img/img_category_pc-min.png);
+    }
+  }
+  &.app {
+    background: url(../../assets/img/img_category2_sp-min.png) no-repeat center
+      center / cover;
+    @include global.mq(md) {
+      background-image: url(../../assets/img/img_category2_tb-min.png);
+    }
+
+    @include global.mq(lg) {
+      background-image: url(../../assets/img/img_category2_pc-min.png);
+    }
+  }
+  &.graphic {
+    background: url(../../assets/img/img_category3_sp-min.png) no-repeat center
+      center / cover;
+    @include global.mq(md) {
+      background-image: url(../../assets/img/img_category3_tb-min.png);
+    }
+
+    @include global.mq(lg) {
+      background-image: url(../../assets/img/img_category3_pc-min.png);
+    }
+  }
+}

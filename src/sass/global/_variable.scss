@@ -1,0 +1,54 @@
+//　色
+$darkGray: #333136;
+$lightGray: #f1f3f5;
+$black: #1d1c1e;
+$white: #ffffff;
+$peach: #e7816b;
+$lightPeach: #ffad9b;
+$beige: #fdf3f0;
+
+// フォント
+$ff: "Jost", sans-serif;
+$fz-base: 16px;
+$fw-base: 400;
+$lh-base: 26px;
+
+//レイアウト
+$inner-width: 1112px; //インナー幅サイズ
+$tb-width: 768px; //タブレットサイズ
+
+// ブレークポイント
+// $breakpoints: (
+// 	// スマホ以下の場合
+// 	"sm": "screen and (max-width: #{$sp-width - 1px})",
+// 	// タブレット以下の場合
+// 	"tab": "screen and (max-width: #{$inner-width - 1px})",
+// 	// タブレット以上の場合
+// 	"pc": "screen and (min-width: #{$inner-width})"
+// );
+
+$breakpoints: (
+  "xs": "screen and (min-width:1px) and ( max-width:370px)",
+  "sm": "not screen and (min-width:350px)",
+  "md": "screen and (min-width: #{$tb-width})",
+  "lg": "screen and (min-width: #{$inner-width})",
+);
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);
+
+// 例 z-index: map-get(global.$layer, floating);

@@ -1,0 +1,45 @@
+@use "../global" as global;
+@use "sass:math";
+.c-designCard {
+  container-type: inline-size;
+}
+
+.c-designCard__inner {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+
+  @container (min-width:400px) {
+    flex-direction: row;
+  }
+}
+
+.c-designCard__img {
+  @container (min-width:400px) {
+    flex: 1 0 math.div(339, 689) * 100%;
+  }
+}
+
+.c-designCard__body {
+  background-color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-block: 32px;
+  padding-inline: 30px;
+  align-items: center;
+
+  @container (min-width:400px) {
+    gap: 14px;
+    padding-block: unset;
+    justify-content: center;
+  }
+}
+
+.c-designCard__title {
+}
+
+.c-designCard__text {
+  text-align: center;
+}

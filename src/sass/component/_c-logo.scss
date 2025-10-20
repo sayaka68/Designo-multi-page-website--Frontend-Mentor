@@ -1,0 +1,30 @@
+@use "../global" as global;
+
+.c-logo {
+  font-family: "League Spartan", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 5px;
+  // display: flex;
+  // align-items: center;
+  // gap: 16px;
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background-image: conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(231, 129, 107, 0) 0deg,
+      #e7816b 359.74345207214355deg
+    );
+    transform: scaleX(-1);
+    position: absolute;
+    left: 0;
+  }
+}

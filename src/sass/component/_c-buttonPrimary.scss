@@ -1,0 +1,39 @@
+@use "../global" as global;
+
+.c-buttonPrimary {
+  border-radius: 8px;
+  background-color: var(--white);
+  padding-block: 17px;
+  display: flex;
+  justify-content: center;
+  width: 152px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--lightPeach);
+    span {
+      color: var(--white);
+    }
+  }
+
+  span {
+    color: var(--darkGray);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  &.--rev {
+    background-color: var(--peach);
+    span {
+      color: var(--white);
+    }
+
+    &:hover {
+      background-color: var(--lightPeach);
+    }
+  }
+}

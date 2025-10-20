@@ -1,0 +1,15 @@
+@use "../global" as global;
+
+.l-inner {
+  padding-inline: 24px;
+
+  @include global.mq(md) {
+    padding-inline: 40px;
+    max-width: 768px; //688+40*2
+    margin-inline: auto;
+  }
+
+  @include global.mq(lg) {
+    max-width: 1192px; //1112+40*2
+  }
+}

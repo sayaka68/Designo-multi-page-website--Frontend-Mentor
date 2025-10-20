@@ -1,0 +1,31 @@
+@use "../global" as global;
+
+.l-header {
+  position: relative;
+  height: 96px;
+  height: var(--headerH);
+  z-index: 20;
+}
+
+.l-header__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.l-header__nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  @include global.mq(md) {
+    position: unset;
+  }
+}
+
+.l-header__hamburger {
+  @include global.mq(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Award-winning custom designs and digital branding solutions"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-header__container l-inner">
+        <% if(page === 'top') {%>
+        <h1 class="c-logo">DESIGNO</h1>
+        <% } else {%>
+        <div class="c-logo">DESIGNO</div>
+        <% } %>
+        <nav class="p-headerNav l-header__nav">
+          <ul class="p-headerNavList">
+            <% if(navItems && navItems.length) { navItems.forEach(item => {%>
+            <li class="p-headerNav__item">
+              <a href="<%= item.link %>"><%= item.name %></a>
+            </li>
+            <%}) }%>
+          </ul>
+        </nav>
+        <div class="l-header__hamburger c-hamburger js-hamburger">
+          <span class="c-hamburger__bar"></span>
+          <span class="c-hamburger__bar"></span>
+          <span class="c-hamburger__bar"></span>
+        </div>
+        <!-- /c-hamburger js-hamburger -->
+      </div>
+      <!-- /l-header__container -->
+    </header>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "categories": [
+    {
+      "name": "WEB DESIGN",
+      "class": "web"
+    },
+    {
+      "name": "APP DESIGN",
+      "class": "app"
+    },
+    {
+      "name": "GRAPHIC DESIGN",
+      "class": "graphic"
+    }
+  ],
+
+  "navItems": [
+    {
+      "name": "OUR COMPANY",
+      "link": "./about.html"
+    },
+    {
+      "name": "LOCATIONS",
+      "link": "./about.html"
+    },
+    {
+      "name": "CONTACT",
+      "link": "./about.html"
+    }
+  ]
+}

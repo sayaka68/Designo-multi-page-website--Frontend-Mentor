@@ -1,0 +1,28 @@
+@use "../global" as global;
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 202px;
+}
+
+.c-card__img {
+}
+
+.c-card__body {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin-top: 32px;
+  }
+}
+
+.c-card__city {
+  margin-top: 48px;
+}
+
+.c-card__text {
+  margin-top: 32px;
+}

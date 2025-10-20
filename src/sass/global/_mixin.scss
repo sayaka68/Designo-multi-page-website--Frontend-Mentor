@@ -1,0 +1,17 @@
+@use "sass:math";
+@use "sass:map";
+@use "./variable" as vars;
+
+//--
+//メディアクエリ
+//--
+@mixin mq($breakpoint: md) {
+  @media #{map.get(vars.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+//line height
+@mixin lh($line, $fz) {
+  line-height: math.div($line, $fz);
+}
