@@ -1,0 +1,25 @@
+@use "../global" as global;
+
+.c-bgCircles {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    background: url(../../assets/img/bgCircles.svg) no-repeat top left/ contain;
+    width: 876px;
+    height: 584px;
+    position: absolute;
+    top: -102px;
+    left: -240px;
+
+    @include global.mq(md) {
+      top: -117px;
+      left: -20px;
+    }
+
+    @include global.mq(lg) {
+      top: -146px;
+      left: 235px;
+    }
+  }
+}

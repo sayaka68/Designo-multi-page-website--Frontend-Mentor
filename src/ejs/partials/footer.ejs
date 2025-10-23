@@ -1,4 +1,46 @@
-<footer></footer>
+ <% var noCta = typeof noCta !== 'undefined' ? noCta : false; %>
+
+<footer class="l-footer <%= noCta ? '--noCta' : '' %>">
+  <div class="l-inner">
+
+<% if (!noCta) { %>
+  <%- include('./cta') %>
+<% } %>
+    <div class="l-footer__top">
+      <div class="c-logo u-textWhite">DESIGNO</div>
+      <nav class="p-nav --footer l-footer__nav">
+        <ul class="p-nav__list">
+          <% if(navItems && navItems.length) { navItems.forEach(item => {%>
+          <li class="p-nav__item">
+            <a href="<%= item.link %>"><%= item.name %></a>
+          </li>
+          <%}) }%>
+        </ul>
+      </nav>
+    </div>
+    <div class="l-footer__bottom">
+      <div class="l-footer__address">
+        <h5>Designo Central Office</h5>
+        <address>3886 Wellington Street<br>Toronto, Ontario M9C 3J5</address>
+      </div>
+      <div class="l-footer__contact">
+        <h5>Contact Us (Central Office)</h5>
+        <a href="tel:+1 253-863-8967">P : +1 253-863-8967</a>
+        <a href="mailto:ontact@designo.co">M : contact@designo.co</a>
+      </div>
+      <div class="l-footer__sns">
+        <ul >
+          <% if(SNSicons) { SNSicons.forEach(item => {%>
+          <li >
+            <a href="<%= item.url %>"><img src="<%= item.icon %>" alt=""></a>
+          </li>
+          <%}) }%>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>
 <div class="u-overlay js-closeModal" id="js-overlay"></div>
 <script src="./assets/js/main.min.js"></script>
   </body>

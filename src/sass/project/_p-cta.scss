@@ -1,0 +1,47 @@
+@use "../global" as global;
+
+.p-cta {
+  background-color: var(--peach);
+  border-radius: 15px;
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  overflow: hidden;
+
+  @include global.mq(md) {
+    padding: 57px 60px;
+  }
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 72px 95px;
+  }
+
+  a {
+    position: relative;
+  }
+}
+
+.p-cta__body {
+  text-align: center;
+  position: relative;
+
+  @include global.mq(lg) {
+    max-width: 459px;
+    text-align: left;
+  }
+}
+
+.p-cta__title {
+}
+
+.p-cta__text {
+  margin-top: 6px;
+
+  @include global.mq(md) {
+    margin-top: 16px;
+  }
+}

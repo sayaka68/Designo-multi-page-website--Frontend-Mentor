@@ -24,10 +24,10 @@
         <% } else {%>
         <div class="c-logo">DESIGNO</div>
         <% } %>
-        <nav class="p-headerNav l-header__nav">
-          <ul class="p-headerNavList">
+        <nav class="p-nav --header l-header__nav" id="js-headerNav">
+          <ul class="p-nav__list">
             <% if(navItems && navItems.length) { navItems.forEach(item => {%>
-            <li class="p-headerNav__item">
+            <li class="p-nav__item">
               <a href="<%= item.link %>"><%= item.name %></a>
             </li>
             <%}) }%>

@@ -1,7 +1,7 @@
 //header nav button
 const hamburger = document.querySelector(".js-hamburger");
 hamburger.addEventListener("click", () => {
-  const nav = document.querySelector(".p-headerNav");
+  const nav = document.querySelector("#js-headerNav");
   const overlay = document.querySelector("#js-overlay");
   if (hamburger.classList.contains("openAnim")) {
     hamburger.classList.remove("openAnim");

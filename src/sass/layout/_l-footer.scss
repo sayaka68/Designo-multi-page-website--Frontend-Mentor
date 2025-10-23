@@ -1,0 +1,132 @@
+@use "../global" as global;
+
+.l-footer {
+  padding-top: 253px;
+  background-color: var(--black);
+  padding-bottom: 64px;
+  position: relative;
+  margin-top: 310px;
+
+  @include global.mq(md) {
+    margin-top: 384px;
+    padding-top: 166px;
+    padding-bottom: 80px;
+  }
+
+  @include global.mq(lg) {
+    margin-top: 380px;
+    padding-top: 144px;
+    padding-bottom: 72px;
+  }
+
+  .p-cta {
+    position: absolute;
+    top: -190px;
+    right: 0;
+    left: 0;
+    margin-inline: auto;
+    max-width: 327px;
+
+    @include global.mq(md) {
+      top: -264px;
+      max-width: 690px;
+    }
+
+    @include global.mq(lg) {
+      top: -220px;
+      max-width: 1112px;
+    }
+  }
+}
+
+.l-footer.--noCta {
+  padding-top: 64px;
+  margin-top: 120px;
+  position: unset;
+
+  @include global.mq(lg) {
+    padding-top: 72px;
+    margin-top: 160px;
+  }
+}
+
+.l-footer__top {
+  @include global.mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .c-logo {
+    width: fit-content;
+    margin-inline: auto;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include global.mq(md) {
+      margin-inline: unset;
+      padding-bottom: unset;
+      border: none;
+    }
+  }
+
+  .p-nav {
+    padding-top: 32px;
+    @include global.mq(md) {
+      padding-top: unset;
+    }
+  }
+}
+
+.l-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+
+  @include global.mq(md) {
+    margin-top: unset;
+    flex-direction: row;
+    gap: unset;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 31px;
+  }
+}
+
+.l-footer__address {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+
+  @include global.mq(md) {
+    text-align: left;
+  }
+}
+
+.l-footer__contact {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+
+  @include global.mq(md) {
+    text-align: left;
+  }
+
+  @include global.mq(lg) {
+    margin-left: -62px;
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+  }
+}
+
+.l-footer__sns {
+  ul {
+    display: flex;
+    gap: 16px;
+  }
+}

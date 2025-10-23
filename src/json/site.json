@@ -21,11 +21,34 @@
     },
     {
       "name": "LOCATIONS",
-      "link": "./about.html"
+      "link": "./locations.html"
     },
     {
       "name": "CONTACT",
-      "link": "./about.html"
+      "link": "./contact.html"
+    }
+  ],
+
+  "SNSicons": [
+    {
+      "icon": "./assets/img/icon_facebook.svg",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "icon": "./assets/img/icon_youtube.svg",
+      "url": "https://www.youtube.com"
+    },
+    {
+      "icon": "./assets/img/icon_X.svg",
+      "url": "https://www.x.com"
+    },
+    {
+      "icon": "./assets/img/icon_pinterest.svg",
+      "url": "https://www.pinterest.com"
+    },
+    {
+      "icon": "./assets/img/icon_instagram.svg",
+      "url": "https://www.instagram.com"
     }
   ]
 }
