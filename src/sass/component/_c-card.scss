@@ -1,13 +1,24 @@
 @use "../global" as global;
 
 .c-card {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  width: 100%;
+  height: auto;
+  container-type: inline-size;
+  display: block;
+}
+
+.c-card__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 202px;
 }
 
 .c-card__img {
+  width: 202px;
+  flex-shrink: 0;
 }
 
 .c-card__body {
@@ -19,10 +30,28 @@
   }
 }
 
-.c-card__city {
+.c-card__title {
   margin-top: 48px;
 }
 
 .c-card__text {
   margin-top: 32px;
+}
+
+@container (min-width:351px) {
+  .c-card__inner {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .c-card__body {
+    text-align: left;
+  }
+  .c-card__title {
+    margin-top: unset;
+  }
+
+  .c-card__text {
+    margin-top: 16px;
+  }
 }

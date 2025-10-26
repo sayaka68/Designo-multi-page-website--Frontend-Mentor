@@ -4,9 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-
-  @include global.mq(md) {
-  }
 }
 
 .p-projectCategories__item {
@@ -21,18 +18,15 @@
   gap: 12px;
   color: var(--white);
   font-weight: 500;
+  position: relative;
+  background-color: var(--peach);
 
   @include global.mq(md) {
     height: 200px;
   }
 
-  a {
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 5px;
-    background: url(../../assets/img/arrow_right_peach.svg) no-repeat center
-      right / 4px;
-    padding-right: 20px;
+  @include global.mq(lg) {
+    height: auto;
   }
 
   &.web {
@@ -46,9 +40,11 @@
       background-image: url(../../assets/img/img_category_pc-min.png);
     }
   }
+
   &.app {
     background: url(../../assets/img/img_category2_sp-min.png) no-repeat center
       center / cover;
+
     @include global.mq(md) {
       background-image: url(../../assets/img/img_category2_tb-min.png);
     }
@@ -65,7 +61,72 @@
     }
 
     @include global.mq(lg) {
-      background-image: url(../../assets/img/img_category3_pc-min.png);
+      background: url(../../assets/img/img_category3_pc-min.png);
     }
   }
+
+  &:hover {
+    &::before {
+      transition: all 0.3s;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  span {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 5px;
+    background: url(../../assets/img/arrow_right_peach.svg) no-repeat center
+      right / 4px;
+    padding-right: 20px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    background: rgb(231, 129, 107, 0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  // &.web {
+  //   background: url(../../assets/img/img_category_sp-min.png) no-repeat center
+  //     center / cover;
+  //   @include global.mq(md) {
+  //     background-image: url(../../assets/img/img_category_tb-min.png);
+  //   }
+
+  //   @include global.mq(lg) {
+  //     background-image: url(../../assets/img/img_category_pc-min.png);
+  //   }
+  // }
+
+  // &.app {
+  //   background: url(../../assets/img/img_category2_sp-min.png) no-repeat center
+  //     center / cover;
+
+  //   @include global.mq(md) {
+  //     background-image: url(../../assets/img/img_category2_tb-min.png);
+  //   }
+
+  //   @include global.mq(lg) {
+  //     background-image: url(../../assets/img/img_category2_pc-min.png);
+  //   }
+  // }
+  // &.graphic {
+  //   background: url(../../assets/img/img_category3_sp-min.png) no-repeat center
+  //     center / cover;
+  //   @include global.mq(md) {
+  //     background-image: url(../../assets/img/img_category3_tb-min.png);
+  //   }
+
+  //   @include global.mq(lg) {
+  //     background-image: url(../../assets/img/img_category3_pc-min.png);
+  //   }
+  // }
 }

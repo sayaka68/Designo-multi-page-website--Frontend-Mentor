@@ -16,7 +16,10 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="">
+    <% var page = typeof page !== 'undefined' ? page : false; %>
+    <% var bg = typeof bg !== 'undefined' ? bg : false; %>
+
     <header class="l-header">
       <div class="l-header__container l-inner">
         <% if(page === 'top') {%>
@@ -42,5 +45,5 @@
       </div>
       <!-- /l-header__container -->
     </header>
-  </body>
-</html>
+    <main class="l-contents --<%= page %> <%= bg %>">
+    </html>

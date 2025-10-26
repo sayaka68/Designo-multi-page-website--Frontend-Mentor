@@ -1,24 +1,20 @@
-<%- include('partials/header', { page: "top" }) %>
+<%- include('partials/header', { page: "top", bg:"c-bg1"}) %>
 
-<h1 class="c-heading1">test</h1>
-<div style="background-color: red">
-  <a href="" class="c-buttonPrimary --rev"><span>buttontest</span></a>
-</div>
-<div class="c-designCard">
-  <div class="c-designCard__inner">
-    <figure class="c-designCard__img">
-      <img src="./assets/img/Express - Desktop-min.png" alt="" />
-    </figure>
-    <div class="c-designCard__body">
-      <h2 class="c-designCard__title c-heading3 u-textPeach">EXPRESS</h2>
-      <p class="c-designCard__text">
-        A multi-carrier shipping website for ecommerce businesses
+<div class="l-inner">
+  <div class="p-MV">
+    <div class="p-MV__body">
+      <h2 class="p-MV__heading c-heading1">
+        Award-winning custom designs and digital branding solutions
+      </h2>
+      <p class="p-MV__text c-textSpSm">
+        With over 10 years in the industry, we are experienced in creating fully
+        responsive websites, app design, and engaging brand experiences. Find
+        out more about our services.
       </p>
+      <a href="./about.html" class="c-buttonPrimary"><span>Learn More</span></a>
     </div>
-    <!-- /c-designCard__body -->
   </div>
-  <!-- /c-designCard__inner -->
+  <%- include('partials/projectCategories', { categories: categories }) %> <%-
+  include('partials/cards', {noBtn:true}) %>
 </div>
-<%- include('partials/projectCategories', { categories: categories }) %> <%-
-include('partials/cards', { cards: cards }) %> <%-
-include('partials/footer',{noCta:true}) %>
+<%- include('partials/footer') %>

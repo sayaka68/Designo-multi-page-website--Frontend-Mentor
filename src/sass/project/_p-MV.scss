@@ -1,0 +1,108 @@
+@use "../global" as global;
+
+.p-MV {
+  background-color: var(--peach);
+  padding: 80px 24px 451px;
+  color: var(--white);
+
+  position: relative;
+  overflow: hidden;
+
+  @include global.mq(md) {
+    padding: 60px 58px 457px;
+  }
+
+  @include global.mq(lg) {
+    padding: 145px 98px 145px 95px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 640px;
+    height: 640px;
+    border-radius: 640px;
+    opacity: 0.3089;
+    opacity: 0.5;
+    background: linear-gradient(
+      90deg,
+      rgba(93, 2, 2, 0) 0%,
+      rgba(93, 2, 2, 0.5) 100%
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin-block: auto;
+
+    @include global.mq(md) {
+      left: 171px;
+    }
+    @include global.mq(lg) {
+      left: unset;
+      right: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 279px;
+    height: 371px;
+    background: url(../../assets/img/img_MV-min.png) no-repeat top center /
+      cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+
+    @include global.mq(lg) {
+      right: 0;
+      left: unset;
+      height: 491px;
+      margin-inline: unset;
+    }
+
+    @include global.mq(lg) {
+      right: 98px;
+      height: 573px;
+      bottom: -72px;
+    }
+  }
+
+  a {
+    position: relative;
+  }
+}
+
+.p-MV__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+
+  @include global.mq(lg) {
+    max-width: 540px;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+  }
+}
+
+.p-MV__heading {
+  position: relative;
+}
+
+.p-MV__text {
+  position: relative;
+  @include global.mq(md) {
+    padding-inline: 64px;
+  }
+
+  @include global.mq(lg) {
+    padding-inline: unset;
+    max-width: 445px;
+  }
+}

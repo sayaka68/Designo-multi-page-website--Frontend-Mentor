@@ -1,16 +1,22 @@
-<div class="p-cards">
+<% var noBtn = typeof noBtn !== 'undefined' ? noBtn : false; %>
+
+<div class="p-cards c-bg1">
   <% if (cards && cards.length) { %> <% cards.forEach(card => { %>
 
   <div class="c-card">
-    <figure class="c-card__img">
-      <img src="<%= card.imgSrc %>" alt="" />
-    </figure>
-    <div class="c-card__body">
-      <h2 class="c-card__city c-heading3"><%= card.title %></h2>
-      <p class="c-card__text"><%= card.text %></p>
-      <a href="" class="c-buttonPrimary --rev"><span>SEE LOCATION</span></a>
+    <div class="c-card__inner">
+      <figure class="c-card__img">
+        <img src="<%= card.imgSrc %>" alt="" />
+      </figure>
+      <div class="c-card__body">
+        <h2 class="c-card__title c-heading3"><%= card.title %></h2>
+        <p class="c-card__text"><%= card.text %></p>
+        <% if(!noBtn) {%>
+        <a href="" class="c-buttonPrimary --rev"><span>SEE LOCATION</span></a>
+        <% } %>
+      </div>
+      <!-- /c-card__body -->
     </div>
-    <!-- /c-card__body -->
   </div>
   <!-- /c-card -->
   <% }) %> <% } else { %>

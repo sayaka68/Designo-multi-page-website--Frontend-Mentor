@@ -7,6 +7,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  color: var(--white);
 
   &.is-active {
     opacity: 1;
@@ -16,7 +17,6 @@
   @include global.mq(md) {
     color: var(--darkGray);
     background-color: transparent;
-
     width: fit-content;
     opacity: 1;
     visibility: visible;
@@ -50,6 +50,7 @@
 }
 
 .p-nav {
+  color: var(--white);
   ul {
     display: flex;
     flex-direction: column;
@@ -63,10 +64,13 @@
   }
 
   a {
-    color: var(--white);
     font-size: 14px;
     font-weight: 400;
     line-height: 14px; /* 100% */
     letter-spacing: 2px;
+
+    &:hover {
+      border-bottom: 1px solid currentColor;
+    }
   }
 }

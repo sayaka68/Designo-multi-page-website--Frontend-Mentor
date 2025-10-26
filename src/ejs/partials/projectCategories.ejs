@@ -2,9 +2,12 @@
   <% if (categories && categories.length) { %> <% categories.forEach(category =>
   { %>
 
-  <div class="p-projectCategories__item <%= category.class %>">
+  <a
+    href="./works-<%= category.class%>.html"
+    class="p-projectCategories__item <%= category.class %>"
+  >
     <h2 class="c-heading2 --spSm"><%= category.name %></h2>
-    <a href=""><span>VIEW PROJECTS</span></a>
-  </div>
+    <span>VIEW PROJECTS</span>
+  </a>
   <% }) %> <% } %>
 </div>

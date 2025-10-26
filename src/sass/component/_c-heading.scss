@@ -1,10 +1,13 @@
 @use "../global" as global;
 
 .c-heading1 {
-  color: var(--black);
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 36px; /* 112.5% */
+  @include global.mq(md) {
+    font-size: 48px;
+    line-height: 1;
+  }
 }
 
 .c-heading2 {

@@ -129,4 +129,10 @@
     display: flex;
     gap: 16px;
   }
+
+  a:hover {
+    path {
+      fill: var(--lightPeach);
+    }
+  }
 }
