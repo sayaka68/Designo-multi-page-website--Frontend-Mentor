@@ -57,7 +57,14 @@ function browserReload(done) {
 
 function watch() {
   gulp.watch("./src/sass/**/*.scss", compileSass);
-  gulp.watch("./src/ejs/**/*.ejs", gulp.series(compileEjs, browserReload));
+  gulp.watch(
+    "./src/json/**/*.json",
+    gulp.series(compileEjs, compileWorks, browserReload)
+  );
+  gulp.watch(
+    "./src/ejs/**/*.ejs",
+    gulp.series(compileEjs, compileWorks, browserReload)
+  );
   gulp.watch("./src/js/**/*.js", gulp.series(minJs, browserReload));
   gulp.watch("./src/img/**/*", copyImage);
 }
@@ -113,7 +120,7 @@ function minJs() {
 function compileEjs() {
   const files = fs
     .readdirSync("src/ejs")
-    .filter((file) => file.endsWith(".ejs"));
+    .filter((file) => file.endsWith(".ejs") && file !== "works.ejs");
 
   return Promise.all(
     files.map((file) => {
@@ -130,6 +137,30 @@ function compileEjs() {
         .pipe(dest("dist"));
     })
   );
+}
+
+function compileWorks(done) {
+  const worksData = JSON.parse(fs.readFileSync("src/json/works.json", "utf8"));
+  const siteData = JSON.parse(fs.readFileSync("src/json/site.json", "utf8"));
+  const categories = [...new Set(worksData.cards.map((card) => card.category))];
+
+  categories.forEach((category) => {
+    const filteredCards = worksData.cards.filter(
+      (card) => card.category === category
+    );
+    gulp
+      .src("./src/ejs/works.ejs")
+      .pipe(
+        ejs({
+          ...siteData,
+          category: category,
+          cards: filteredCards,
+        })
+      )
+      .pipe(rename(`works-${category}.html`))
+      .pipe(dest("dist"));
+  });
+  done();
 }
 
 exports.default = gulp.series(compileEjs, compileSass, browserInit, watch);

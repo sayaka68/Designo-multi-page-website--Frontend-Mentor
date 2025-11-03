@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include global.mq(lg) {
+    flex-direction: row;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
 }
 
 .p-projectCategories__item {
@@ -26,7 +34,7 @@
   }
 
   @include global.mq(lg) {
-    height: auto;
+    height: 308px;
   }
 
   &.web {

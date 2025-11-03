@@ -1,0 +1,18 @@
+<% if(cards && cards.length) {%> <% cards.forEach((card) => {%>
+<a href="#" class="c-designCard --<%= card.category%>">
+  <div class="c-designCard__inner">
+    <figure class="c-designCard__img">
+      <img src="<%= card.imgSrc %>" alt="" />
+    </figure>
+    <div class="c-designCard__body">
+      <h2 class="c-designCard__title c-heading3 u-textPeach">
+        <%= card.title%>
+      </h2>
+      <p class="c-designCard__text"><%= card.description %></p>
+    </div>
+    <!-- /c-designCard__body -->
+  </div>
+  <!-- /c-designCard__inner -->
+</a>
+
+<% })%> <% } %>

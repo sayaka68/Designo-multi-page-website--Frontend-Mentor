@@ -2,22 +2,45 @@
 @use "sass:math";
 .c-designCard {
   container-type: inline-size;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    .c-designCard__title,
+    .c-designCard__text {
+      color: var(--white);
+    }
+
+    .c-designCard__body {
+      background-color: var(--peach);
+    }
+  }
 }
 
 .c-designCard__inner {
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
-  overflow: hidden;
 
   @container (min-width:400px) {
     flex-direction: row;
+    height: 310px;
   }
 }
 
 .c-designCard__img {
+  display: flex;
+  align-items: flex-end;
+  height: 320px;
+  border-radius: inherit;
   @container (min-width:400px) {
     flex: 1 0 math.div(339, 689) * 100%;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -29,6 +52,7 @@
   padding-block: 32px;
   padding-inline: 30px;
   align-items: center;
+  transition: all 0.3s;
 
   @container (min-width:400px) {
     gap: 14px;
@@ -38,8 +62,48 @@
 }
 
 .c-designCard__title {
+  transition: all 0.3s;
 }
 
 .c-designCard__text {
+  transition: all 0.3s;
   text-align: center;
+}
+
+.c-designCard.--app {
+  &:first-child {
+    figure {
+      background-color: #2e3947;
+    }
+  }
+  &:nth-child(2) {
+    figure {
+      background-color: #34b7a2;
+    }
+  }
+  &:nth-child(3) {
+    figure {
+      background-color: #3f2f83;
+    }
+  }
+  &:nth-child(4) {
+    figure {
+      background-color: #40125a;
+    }
+  }
+  &:nth-child(5) {
+    figure {
+      background-color: #853a4d;
+    }
+  }
+
+  img {
+    max-width: 172px;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+.c-designCard__img.--app {
 }

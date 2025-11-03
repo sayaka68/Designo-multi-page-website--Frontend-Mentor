@@ -72,24 +72,24 @@
     @include global.mq(lg) {
       flex-direction: row;
     }
+  }
+}
 
-    &::before {
-    }
+.l-contents.--works {
+  &::before {
+    transform: rotate(0);
+    top: 126px;
   }
 
-  // .c-card {
-  //   flex-direction: row;
-  //   gap: 48px;
-  // }
+  .l-inner {
+    gap: 96px;
 
-  // .c-card__body {
-  //   text-align: left;
-  // }
-  // .c-card__title {
-  //   margin-top: unset;
-  // }
+    @include global.mq(md) {
+      gap: 120px;
+    }
 
-  // .c-card__text {
-  //   margin-top: 16px;
-  // }
+    @include global.mq(lg) {
+      gap: 160px;
+    }
+  }
 }

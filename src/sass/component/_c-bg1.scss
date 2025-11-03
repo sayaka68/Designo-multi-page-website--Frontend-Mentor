@@ -10,12 +10,14 @@
     background-size: min(1006px, 100%) 594px;
     width: 100vw;
     height: 594px;
+    max-width: 1006px;
     position: absolute;
     z-index: -5;
     transform: rotate(180deg);
     transform-origin: center;
     // bottom: -306px;
-    // right: max(calc(50% - 50vw), -164px);
+    // left: max(calc(50% - 50vw), -164px);
+    left: calc(50vw - min(720px, 50%));
 
     @include global.mq(lg) {
       display: block;

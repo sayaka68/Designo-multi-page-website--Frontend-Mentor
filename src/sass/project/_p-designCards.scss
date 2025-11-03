@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+.p-designCards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include global.mq(md) {
+    gap: 32px;
+  }
+
+  @include global.mq(lg) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+}

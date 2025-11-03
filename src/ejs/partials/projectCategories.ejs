@@ -1,6 +1,8 @@
-<div class="p-projectCategories">
-  <% if (categories && categories.length) { %> <% categories.forEach(category =>
-  { %>
+<% var page = typeof page !== 'undefined' ? page : false; %>
+
+<div class="p-projectCategories <%= page %>">
+  <% if (categories && page === 'top' ) { %> <% categories.forEach(category => {
+  %>
 
   <a
     href="./works-<%= category.class%>.html"
@@ -9,5 +11,14 @@
     <h2 class="c-heading2 --spSm"><%= category.name %></h2>
     <span>VIEW PROJECTS</span>
   </a>
-  <% }) %> <% } %>
+  <% }) %> <% }else{ const filtered = categories.filter(item => item.class !==
+  category); filtered.forEach(item => { %>
+  <a
+    href="./works-<%= item.class%>.html"
+    class="p-projectCategories__item <%= item.class %>"
+  >
+    <h2 class="c-heading2 --spSm"><%= item.name %></h2>
+    <span>VIEW PROJECTS</span>
+  </a>
+  <%})}%>
 </div>

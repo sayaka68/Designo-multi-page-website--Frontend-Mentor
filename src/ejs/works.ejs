@@ -1,17 +1,15 @@
-<%- include('partials/header') %>
-
-<div class="c-designCard">
-  <div class="c-designCard__inner">
-    <figure class="c-designCard__img">
-      <img src="./assets/img/Express - Desktop-min.png" alt="" />
-    </figure>
-    <div class="c-designCard__body">
-      <h2 class="c-designCard__title c-heading3 u-textPeach">EXPRESS</h2>
-      <p class="c-designCard__text">
-        A multi-carrier shipping website for ecommerce businesses
-      </p>
-    </div>
-    <!-- /c-designCard__body -->
+<%- include('partials/header',{ page: "works", bg:"c-bg1"}) %>
+<div class="l-inner">
+  <div class="p-worksTop --<%= category %>">
+    <% categories.forEach(function(item){ %> <% if(item.class === category) {%>
+    <h1 class="c-heading1"><%= item.name %></h1>
+    <p class="c-textSpSm"><%- item.description %></p>
+    <%}%> <% }) %>
   </div>
-  <!-- /c-designCard__inner -->
+  <div class="p-designCards --<%= category %>">
+    <%- include('partials/designCard', {cards: cards}) %>
+  </div>
+  <%- include('partials/projectCategories') %>
 </div>
+<!-- /l-inner -->
+<%- include('partials/footer') %>

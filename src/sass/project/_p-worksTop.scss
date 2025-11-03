@@ -1,0 +1,72 @@
+@use "../global" as global;
+
+.p-worksTop {
+  padding: 105px 24px;
+  color: var(--white);
+  background-color: var(--peach);
+  text-align: center;
+
+  @include global.mq(md) {
+    padding-block: 64px;
+  }
+
+  > * {
+    position: relative;
+  }
+
+  p {
+    margin-top: 24px;
+  }
+}
+
+.p-worksTop.--web,
+.p-worksTop.--app,
+.p-worksTop.--graphic {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    display: block;
+    background: url(../../assets/img/bg_circles-works-sp.svg) no-repeat top
+      right/ contain;
+    width: 584px;
+    height: 292px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include global.mq(md) {
+      background: url(../../assets/img/bg_circles-works.svg) no-repeat top left/
+        contain;
+      width: 876px;
+      height: 584px;
+
+      top: 0;
+      bottom: 0;
+      margin-block: auto;
+      left: calc(50% - 50vw);
+    }
+
+    @include global.mq(lg) {
+      left: unset;
+      right: 0;
+    }
+  }
+}
+
+.p-worksTop.--app {
+  &::before {
+    @include global.mq(lg) {
+      background: url(../../assets/img/bg_circles-works2.svg) no-repeat top
+        left/ contain;
+    }
+  }
+}
+.p-worksTop.p-worksTop.--graphic {
+  &::before {
+    @include global.mq(lg) {
+      background: url(../../assets/img/bg_circles-works3.svg) no-repeat top
+        left/ contain;
+    }
+  }
+}

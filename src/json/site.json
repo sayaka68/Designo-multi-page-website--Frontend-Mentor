@@ -1,16 +1,19 @@
 {
   "categories": [
     {
-      "name": "WEB DESIGN",
-      "class": "web"
+      "name": "Web Design",
+      "class": "web",
+      "description": "We build websites that serve as powerful marketing tools <br class='u-hiddenSp'>and bring memorable brand experiences."
     },
     {
-      "name": "APP DESIGN",
-      "class": "app"
+      "name": "App Design",
+      "class": "app",
+      "description": "Our mobile designs bring intuitive digital solutions <br class='u-hiddenSp'>to your customers right at their fingertips."
     },
     {
-      "name": "GRAPHIC DESIGN",
-      "class": "graphic"
+      "name": "Graphic Design",
+      "class": "graphic",
+      "description": "We deliver eye-catching branding materials that are <br class='u-hiddenSp'>tailored to meet your business objectives."
     }
   ],
 
