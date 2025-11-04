@@ -1,0 +1,63 @@
+@use "../global" as global;
+@use "sass:math";
+
+.p-feature {
+  @include global.mq(md) {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  @include global.mq(lg) {
+    display: flex;
+  }
+}
+
+.p-feature__img {
+  @include global.mq(lg) {
+    flex: 1 0 math.div(476px, 1112px) * 100%;
+  }
+}
+
+.p-feature__body {
+  padding: 80px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: var(--beige);
+  position: relative;
+  overflow: hidden;
+
+  @include global.mq(md) {
+    padding-inline: 58px;
+  }
+
+  @include global.mq(lg) {
+    justify-content: center;
+    text-align: left;
+    padding-inline: 96px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: url(../../assets/img/bg_circles-about.svg) no-repeat left top /
+      contain;
+    width: 584px;
+    height: 584px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include global.mq(md) {
+      top: -212px;
+      left: 94px;
+    }
+
+    @include global.mq(lg) {
+      left: -146px;
+      top: unset;
+      bottom: 0;
+    }
+  }
+}

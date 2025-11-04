@@ -1,0 +1,74 @@
+@use "../global" as global;
+@use "sass:math";
+
+.p-aboutTop {
+  position: relative;
+  overflow: hidden;
+
+  @include global.mq(md) {
+    border-radius: 15px;
+  }
+  @include global.mq(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.p-aboutTop__img {
+  @include global.mq(lg) {
+    flex: 1 0 math.div(476px, 1112px) * 100%;
+  }
+}
+
+.p-aboutTop__body {
+  padding: 80px 24px;
+  color: var(--white);
+  background-color: var(--peach);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+
+  @include global.mq(lg) {
+    padding-block: 135px;
+  }
+
+  & > * {
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: url(../../assets/img/bg_circles-works-sp.svg) no-repeat top
+      right/ contain;
+    width: 584px;
+    height: 292px;
+    position: absolute;
+    top: -146px;
+    right: 0;
+
+    @include global.mq(md) {
+      width: 640px;
+      height: 640px;
+      border-radius: 640px;
+      opacity: 0.4;
+      background: linear-gradient(
+        90deg,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+      left: -124px;
+      top: -430px;
+    }
+
+    @include global.mq(lg) {
+      top: unset;
+      bottom: 0;
+      left: unset;
+      right: 0;
+    }
+  }
+}

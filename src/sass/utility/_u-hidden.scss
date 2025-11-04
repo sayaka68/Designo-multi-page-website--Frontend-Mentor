@@ -3,6 +3,6 @@
 .u-hiddenSp {
   display: none;
   @include global.mq(md) {
-    display: inline-block;
+    display: block;
   }
 }

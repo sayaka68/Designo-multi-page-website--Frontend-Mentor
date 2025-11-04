@@ -1,7 +1,8 @@
 @use "../global" as global;
 
 .l-contents {
-  .l-inner {
+  overflow: hidden;
+  > .l-inner {
     display: flex;
     flex-direction: column;
     gap: 120px;
@@ -13,7 +14,7 @@
 }
 
 .l-contents {
-  .l-inner {
+  > .l-inner {
     > div {
       &:first-child {
         margin-inline: calc(50% - 50vw);
@@ -62,7 +63,8 @@
 
     &::before {
       bottom: -306px;
-      right: max(calc(50% - 50vw), -164px);
+      right: calc(50% - min(720px, 50vw));
+      left: unset;
     }
 
     @include global.mq(md) {
@@ -90,6 +92,60 @@
 
     @include global.mq(lg) {
       gap: 160px;
+    }
+  }
+}
+
+.l-contents.--about {
+  &::before {
+    transform: rotate(0);
+    top: 320px;
+  }
+  .l-inner {
+    padding: 0;
+    @include global.mq(md) {
+      padding-inline: 39px;
+      max-width: 768px; //690+39*2
+      margin-inline: auto;
+    }
+
+    @include global.mq(lg) {
+      max-width: 1192px; //1112+40*2
+      margin-inline: auto;
+    }
+  }
+  .p-cards {
+    padding-block: 120px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include global.mq(md) {
+      padding-block: 0;
+    }
+
+    @include global.mq(lg) {
+      flex-direction: row;
+    }
+
+    &::before {
+      transform: rotate(0);
+      top: 182px;
+      right: -561px;
+      left: unset;
+    }
+  }
+
+  .c-card {
+    max-width: 350px;
+  }
+
+  .p-feature {
+    &:nth-of-type(2) {
+      .p-feature__body::before {
+        left: 0;
+      }
     }
   }
 }
