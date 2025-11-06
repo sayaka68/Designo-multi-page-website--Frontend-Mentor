@@ -1,0 +1,9 @@
+<%- include("partials/header", { page: "location"})%>
+<div class="l-inner --spFullWidth">
+  <div class="p-locations">
+    <% locations.forEach(location =>{%> <%-
+    include("partials/location",{location: location} ), %> <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

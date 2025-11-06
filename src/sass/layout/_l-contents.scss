@@ -102,17 +102,17 @@
     top: 320px;
   }
   .l-inner {
-    padding: 0;
-    @include global.mq(md) {
-      padding-inline: 39px;
-      max-width: 768px; //690+39*2
-      margin-inline: auto;
-    }
+    // padding: 0;
+    // @include global.mq(md) {
+    //   padding-inline: 39px;
+    //   max-width: 768px; //690+39*2
+    //   margin-inline: auto;
+    // }
 
-    @include global.mq(lg) {
-      max-width: 1192px; //1112+40*2
-      margin-inline: auto;
-    }
+    // @include global.mq(lg) {
+    //   max-width: 1192px; //1112+40*2
+    //   margin-inline: auto;
+    // }
   }
   .p-cards {
     padding-block: 120px;

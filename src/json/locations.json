@@ -1,0 +1,28 @@
+{
+  "locations": [
+    {
+      "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2255150934784!2d-79.3950468!3d43.643476199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d90529cc17%3A0x1e7f0644c6251189!2sDesign%20Group%20Consultants!5e0!3m2!1sja!2sjp!4v1762377812681!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "pay": "Canada",
+      "officeName": "Designo Central Office",
+      "address": "3886 Wellington Street<br>Toronto, Ontario M9C 3J5",
+      "tel": "+1 253-863-8967",
+      "mail": "contact@designo.co"
+    },
+    {
+      "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.943864964922!2d149.78072764747523!3d-30.32411450996486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ba7345b749256f3%3A0x9259d755fc76ef!2zQmFsb25uZSBTdCwgTmFycmFicmkgTlNXIDIzOTAg44Kq44O844K544OI44Op44Oq44Ki!5e0!3m2!1sja!2sjp!4v1762378843687!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "pay": "Australia",
+      "officeName": "Designo AU Office",
+      "address": "19 Balonne Street<br>New South Wales 2443",
+      "tel": "(02) 6720 9092",
+      "mail": "contact@designo.au"
+    },
+    {
+      "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4716.296287183396!2d-3.8666348339269163!3d51.730779539617046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e59b189fb4a9f%3A0x2dd151513ab5355a!2sPremier!5e0!3m2!1sja!2sjp!4v1762379345632!5m2!1sja!2sjp\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "pay": "United Kingdom",
+      "officeName": "Designo UK Office",
+      "address": "Colorado Way<br>Rhyd-y-fro SA8 9GA",
+      "tel": "078 3115 1400",
+      "mail": "contact@designo.uk"
+    }
+  ]
+}

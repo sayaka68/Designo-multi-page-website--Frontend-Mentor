@@ -1,0 +1,22 @@
+<div class="p-locationCard">
+  <div class="p-locationCard__iframe"><%- location.iframe %></div>
+  <div class="p-locationCard__body">
+    <h2 class="p-locationCard__pay c-heading5 u-textPeach">
+      <%= location.pay %>
+    </h2>
+    <div class="p-locationCard__contactInfo">
+      <div class="p-locationCard__office c-textSpSm">
+        <h3><%= location.officeName %></h3>
+        <address><%- location.address %></address>
+      </div>
+      <div class="p-locationCard__contact c-textSpSm">
+        <h3>Contact</h3>
+        <a href="tel:+<%= location.tel %>">P : <%= location.tel %></a>
+        <a href="mailto:<%= location.mail %>">M : <%= location.mail %></a>
+      </div>
+    </div>
+    <!-- /p-locationCard__contactInfo -->
+  </div>
+  <!-- /p-locationCard__body -->
+</div>
+<!-- /p-locationCard -->

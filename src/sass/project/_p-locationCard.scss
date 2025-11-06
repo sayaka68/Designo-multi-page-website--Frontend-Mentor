@@ -1,0 +1,106 @@
+@use "../global" as global;
+@use "sass:math";
+
+.p-locationCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include global.mq(md) {
+    gap: 31px;
+  }
+
+  @include global.mq(lg) {
+    flex-direction: row;
+    height: 326px;
+    justify-content: space-between;
+  }
+}
+
+.p-locationCard__iframe {
+  height: 320px;
+  line-height: 0;
+  // width: 100%;
+  @include global.mq(md) {
+    height: unset;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  iframe {
+    @include global.mq(md) {
+      aspect-ratio: 689 / 326;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include global.mq(lg) {
+      aspect-ratio: 175 / 163;
+    }
+  }
+}
+
+.p-locationCard__body {
+  padding-block: 80px;
+  background-color: var(--beige);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  @include global.mq(md) {
+    border-radius: 15px;
+    padding: 88px 75px;
+    align-items: flex-start;
+  }
+
+  @include global.mq(lg) {
+    padding: 88px 95px;
+    flex-basis: math.div(720px, 1112px) * 100%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: url(../../assets/img/bg_circles-about.svg) no-repeat left top /
+      contain;
+    width: 584px;
+    height: 584px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include global.mq(md) {
+      top: unset;
+      bottom: 0;
+    }
+  }
+}
+
+.p-locationCard__pay {
+}
+.p-locationCard__contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+
+  @include global.mq(md) {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.p-locationCard__office {
+  @include global.mq(md) {
+    flex: 0 1 calc(50% - 15px);
+  }
+}
+
+.p-locationCard__contact {
+  & > * {
+    display: block;
+  }
+}
