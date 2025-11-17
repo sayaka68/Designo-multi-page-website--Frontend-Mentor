@@ -1,0 +1,109 @@
+@use "../global" as global;
+
+.p-form {
+  padding-top: 23px;
+  textarea {
+    line-height: 1.5;
+  }
+}
+
+.p-form__item {
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.p-form__item {
+  span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 29px;
+    font-style: italic;
+    font-size: 12px;
+    opacity: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      background: url(../../assets/img/icon_attention.svg) no-repeat center
+        center / contain;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 2px;
+      right: 0;
+    }
+  }
+
+  span.is-active {
+    opacity: 1;
+  }
+}
+
+.p-form__input {
+  width: 100%;
+  padding-left: 14px;
+  padding-bottom: 11px;
+  border: none;
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+  transition: border-color 0.3s;
+  background-color: transparent;
+  font-family: global.$ff;
+}
+
+.p-form__input:focus {
+  outline: none;
+  border-bottom-width: 3px;
+}
+.p-form__input::placeholder {
+  color: transparent;
+}
+.p-form__input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.p-form__label {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  color: var(--white);
+  opacity: 0.5;
+  pointer-events: none;
+  transform-origin: left center;
+  transition: transform 0.3s;
+}
+
+.p-form__input:focus + .p-form__label,
+.p-form__input:not(:placeholder-shown) + .p-form__label {
+  transform: translateY(-100%) scale(0.75);
+}
+
+// .p-form__input:placeholder-shown + .p-form__label + .u-clear {
+//   display: none;
+// }
+
+.p-form__submit {
+  margin-inline: auto;
+  margin-top: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  @include global.mq(md) {
+    margin-top: 24px;
+    margin-inline: unset;
+    margin-left: auto;
+  }
+}
+
+.p-form__submitError {
+  display: none;
+  margin-top: 8px;
+
+  &.is-show {
+    display: inline-block;
+  }
+}

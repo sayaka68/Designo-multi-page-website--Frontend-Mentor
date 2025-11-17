@@ -58,15 +58,15 @@
   "cards": [
     {
       "imgSrc": "../assets/img/img_location-min.png",
-      "title": "CANADA"
+      "title": "Canada"
     },
     {
       "imgSrc": "../assets/img/img_location2-min.png",
-      "title": "AUSTRALIA"
+      "title": "Australia"
     },
     {
       "imgSrc": "../assets/img/img_location3-min.png",
-      "title": "UNITED KINGDOM"
+      "title": "United Kingdom"
     }
   ]
 }

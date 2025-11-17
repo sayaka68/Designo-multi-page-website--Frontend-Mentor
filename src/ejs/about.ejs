@@ -57,7 +57,10 @@
       </p>
     </div>
   </section>
-  <%- include('partials/cards') %>
+  <div class="p-cards c-bg1">
+    <% cards.forEach(card => { %> <%- include('partials/card', {card: card}) %>
+    <% }) %>
+  </div>
   <section class="p-feature u-flexRowRev">
     <figure class="p-feature__img">
       <picture>

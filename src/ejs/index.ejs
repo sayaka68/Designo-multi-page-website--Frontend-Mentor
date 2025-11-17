@@ -15,6 +15,11 @@
     </div>
   </div>
   <%- include('partials/projectCategories', { categories: categories ,
-  page:"top"}) %> <%- include('partials/cards', {noBtn:true}) %>
+  page:"top"}) %>
+  <div class="p-cards">
+    <% if (cards && cards.length) { %> <% cards.forEach(card => { %> <%-
+    include('partials/card', {noBtn:true, card: card}) %> <% })} %>
+  </div>
+
+  <%- include('partials/footer',{bg:"c-bg1"}) %>
 </div>
-<%- include('partials/footer') %>

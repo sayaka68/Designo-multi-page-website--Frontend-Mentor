@@ -1,0 +1,91 @@
+<%- include("partials/header", {page: "contact"}) %>
+
+<div class="l-inner">
+  <div class="p-contactTop">
+    <div class="p-contactTop__body">
+      <h1 class="p-contactTop__heading c-heading1">Contact Us</h1>
+      <p class="p-contactTop__text">
+        Ready to take it to the next level? Let’s talk about your project or
+        idea and find out how we can help your business grow. If you are looking
+        for unique digital experiences that’s relatable to your users, drop us a
+        line.
+      </p>
+    </div>
+    <!-- /p-contactTop__body -->
+    <form class="p-form p-contact__form js-form" method="POST" novalidate>
+      <div class="p-form__item">
+        <input
+          autocomplete="off"
+          class="p-form__input c-textSpSm js-input"
+          type="text"
+          id="name"
+          placeholder="Name"
+          required
+          name="entry.756337340"
+        />
+        <label class="p-form__label" for="name">Name</label>
+        <span class="js-errorMsg"></span>
+      </div>
+      <!-- /p-form__item -->
+      <div class="p-form__item">
+        <input
+          autocomplete="off"
+          class="p-form__input c-textSpSm js-input"
+          type="email"
+          id="email"
+          placeholder="Email Address"
+          required
+          name="entry.85032429"
+        />
+        <label class="p-form__label" for="mail">Email Address</label>
+        <span class="js-errorMsg"></span>
+      </div>
+      <!-- /p-form__item -->
+      <div class="p-form__item">
+        <input
+          autocomplete="off"
+          class="p-form__input c-textSpSm"
+          type="tel"
+          id="tel"
+          placeholder="Phone"
+          name="entry.1466699220"
+        />
+        <label class="p-form__label" for="tel">Phone</label>
+      </div>
+      <!-- /p-form__item -->
+      <div class="p-form__item">
+        <textarea
+          autocomplete="off"
+          class="p-form__input c-textSpSm js-input"
+          id="message"
+          placeholder="Your Message"
+          required
+          name="entry.2015478413"
+          rows="3"
+        ></textarea>
+        <label class="p-form__label" for="message">Your Message</label>
+        <span class="js-errorMsg"></span>
+      </div>
+      <!-- /p-form__item -->
+      <button class="p-form__submit c-buttonPrimary" type="submit">
+        Submit
+      </button>
+      <span class="p-form__submitError js-submitError"
+        >Please fill in the required sections with the relevant
+        information.</span
+      >
+    </form>
+  </div>
+  <!-- /p-contactTop -->
+  <div class="p-cards">
+    <% cards.forEach(card => { %> <%- include('partials/card', {card: card}) %>
+    <% }) %>
+  </div>
+  <iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display: none"
+  ></iframe>
+</div>
+
+<%- include("partials/footer", {noCta:true, bg:"c-bg1"}) %>

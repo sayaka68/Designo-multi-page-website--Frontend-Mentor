@@ -1,12 +1,14 @@
- <% var noCta = typeof noCta !== 'undefined' ? noCta : false; %>
+<% var noCta = typeof noCta !== 'undefined' ? noCta : false; %>
+<% var bg = typeof bg !== 'undefined' ? bg : false; %>
+
 </main>
-<footer class="l-footer <%= noCta ? '--noCta' : '' %>">
+<footer class="l-footer <%= bg %> <%= noCta ? '--noCta' : '' %>">
   <div class="l-inner">
 
 <% if (!noCta) { %>
   <%- include('./cta') %>
 <% } %>
-    <div class="l-footer__top">
+    <div class="l-footer__top ">
       <div class="c-logo u-textWhite">DESIGNO</div>
       <nav class="p-nav --footer l-footer__nav">
         <ul class="p-nav__list">

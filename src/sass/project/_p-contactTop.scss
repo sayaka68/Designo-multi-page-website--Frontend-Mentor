@@ -1,0 +1,79 @@
+@use "../global" as global;
+
+.p-contactTop {
+  background-color: var(--peach);
+  color: var(--white);
+  text-align: center;
+  padding: 72px 24px;
+  position: relative;
+  overflow: hidden;
+
+  & > * {
+    position: relative;
+  }
+
+  @include global.mq(md) {
+    text-align: left;
+    padding: 71px 58px;
+  }
+
+  @include global.mq(lg) {
+    display: flex;
+    padding: 54px 96px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: url(../../assets/img/bg_circles-works-sp.svg) no-repeat top
+      right/ contain;
+    width: 584px;
+    height: 292px;
+    position: absolute;
+    top: 0;
+    left: -116px;
+
+    @include global.mq(md) {
+      width: 640px;
+      height: 640px;
+      border-radius: 640px;
+      opacity: 0.4;
+      background: linear-gradient(
+        180deg,
+        rgba(93, 2, 2, 0) 0%,
+        rgba(93, 2, 2, 0.5) 100%
+      );
+      left: -122px;
+      top: -83px;
+      bottom: 0;
+    }
+
+    @include global.mq(lg) {
+      top: -160px;
+    }
+  }
+}
+
+.p-contactTop__body {
+  @include global.mq(lg) {
+    width: 540px;
+    margin-top: 80px;
+  }
+}
+
+.p-contactTop__heading {
+}
+
+.p-contactTop__text {
+  margin-top: 24px;
+
+  @include global.mq(md) {
+    margin-top: 32px;
+  }
+}
+
+.p-contact__form {
+  @include global.mq(lg) {
+    flex: 1 0 auto;
+  }
+}

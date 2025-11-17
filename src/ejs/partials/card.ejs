@@ -1,0 +1,20 @@
+<% var noBtn = typeof noBtn !== 'undefined' ? noBtn : false; %>
+
+<div class="c-card">
+  <div class="c-card__inner">
+    <figure class="c-card__img">
+      <img src="<%= card.imgSrc %>" alt="" />
+    </figure>
+    <div class="c-card__body">
+      <h2 class="c-card__title c-heading3"><%= card.title %></h2>
+      <p class="c-card__text"><%= card.text %></p>
+      <% if(!noBtn) {%>
+      <a href="./locations.html#<%= card.title %>" class="c-buttonPrimary --rev"
+        ><span>SEE LOCATION</span></a
+      >
+      <% } %>
+    </div>
+    <!-- /c-card__body -->
+  </div>
+</div>
+<!-- /c-card -->

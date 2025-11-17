@@ -15,6 +15,11 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
+    <% if(page === 'contact'){ %>
+      <script type="text/javascript">
+        let submitted = false;
+      </script>
+    <%} %>
   </head>
   <body>
     <% var page = typeof page !== 'undefined' ? page : false; %>
@@ -23,9 +28,9 @@
     <header class="l-header">
       <div class="l-header__container l-inner">
         <% if(page === 'top') {%>
-        <h1 class="c-logo">DESIGNO</h1>
+        <h1 class="c-logo"><a href="/">DESIGNO</a></h1>
         <% } else {%>
-        <div class="c-logo">DESIGNO</div>
+        <div class="c-logo"><a href="/">DESIGNO</a></div>
         <% } %>
         <nav class="p-nav --header l-header__nav" id="js-headerNav">
           <ul class="p-nav__list">
