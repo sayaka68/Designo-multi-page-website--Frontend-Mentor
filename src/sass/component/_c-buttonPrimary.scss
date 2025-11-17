@@ -9,7 +9,8 @@
   width: 152px;
   transition: background-color 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: var(--lightPeach);
     span {
       color: var(--white);
@@ -32,7 +33,8 @@
       color: var(--white);
     }
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: var(--lightPeach);
     }
   }

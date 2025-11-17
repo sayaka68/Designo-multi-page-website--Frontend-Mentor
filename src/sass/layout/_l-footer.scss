@@ -129,7 +129,8 @@
     gap: 16px;
   }
 
-  a:hover {
+  a:hover,
+  a:focus-visible {
     path {
       fill: var(--lightPeach);
     }

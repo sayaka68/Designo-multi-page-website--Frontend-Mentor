@@ -69,7 +69,8 @@
     line-height: 14px; /* 100% */
     letter-spacing: 2px;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       border-bottom: 1px solid currentColor;
     }
   }

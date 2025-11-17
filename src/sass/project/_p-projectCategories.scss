@@ -73,7 +73,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     &::before {
       transition: all 0.3s;
       opacity: 1;
