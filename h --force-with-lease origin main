@@ -1,0 +1,14 @@
+* [33m57d2014[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m graphicのbackground-sizeを修正(角丸がおかしかった)
+* [33mb7548ec[m Modify workflow for Gulp site deployment
+* [33m3d044cc[m ページ公開用のタスクをgulpfile.jsに追加。及びreadme.md内のリンクurlを修正
+[31m|[m * [33mf540099[m[33m ([m[1;31morigin/main[m[33m)[m Modify workflow for Gulp site deployment
+[31m|[m[31m/[m  
+* [33m57e8bff[m readmeとその中で使う画像を追加
+* [33mf8f3dcb[m focus-visible時のスタイルがhover時と揃うように修正
+* [33maec8b4d[m バージョン1完成
+* [33m8861f2c[m locationsページ完成
+* [33mc160475[m aboutページ完成
+* [33mb04e338[m works.ejs完成。1つのworks.ejsからカテゴリごとのworks-〇〇.htmlを出しわけるところから見た目まで。
+* [33m84fcc24[m トップページ完成
+* [33ma4ade46[m footer 及び CTA 完成
+* [33m34e949c[m 初回コミット

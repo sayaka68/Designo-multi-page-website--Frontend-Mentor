@@ -2,7 +2,7 @@ name: Deploy Gulp site to Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -14,19 +14,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - run: npm ci
       - run: npm install -g gulp-cli
 
-      # ← GitHub Pages 公開用 dist の生成
       - run: gulp build
 
-      # ← dist を Pages 用にアップロード
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
@@ -34,4 +32,4 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/deploy-pages@v2
+      - uses: actions/deploy-pages@v4
