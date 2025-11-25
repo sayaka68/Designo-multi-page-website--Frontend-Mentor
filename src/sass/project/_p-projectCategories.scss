@@ -63,7 +63,7 @@
   }
   &.graphic {
     background: url(../../assets/img/img_category3_sp-min.png) no-repeat center
-      center / cover;
+      center / contain;
     @include global.mq(md) {
       background-image: url(../../assets/img/img_category3_tb-min.png);
     }
