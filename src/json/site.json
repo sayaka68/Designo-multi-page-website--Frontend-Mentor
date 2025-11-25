@@ -57,15 +57,15 @@
 
   "cards": [
     {
-      "imgSrc": "/assets/img/img_location-min.png",
+      "imgSrc": "assets/img/img_location-min.png",
       "title": "Canada"
     },
     {
-      "imgSrc": "/assets/img/img_location2-min.png",
+      "imgSrc": "assets/img/img_location2-min.png",
       "title": "Australia"
     },
     {
-      "imgSrc": "/assets/img/img_location3-min.png",
+      "imgSrc": "assets/img/img_location3-min.png",
       "title": "United Kingdom"
     }
   ]
