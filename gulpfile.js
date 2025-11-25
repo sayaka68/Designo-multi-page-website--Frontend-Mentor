@@ -163,4 +163,12 @@ function compileWorks(done) {
   done();
 }
 
+exports.build = gulp.series(
+  compileEjs,
+  compileWorks,
+  compileSass,
+  minJs,
+  copyImage
+);
+
 exports.default = gulp.series(compileEjs, compileSass, browserInit, watch);

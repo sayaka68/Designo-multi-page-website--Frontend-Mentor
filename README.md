@@ -8,7 +8,7 @@ Voici ma solution pour le challenge "Designo multi-page website" !
 
 ## 🌐 Site
 
-[👉 Voir le site](https://sayaka68.github.io/designo---Frontend-Mentor/)
+[👉 Voir le site](https://sayaka68.github.io/Designo-multi-page-website--Frontend-Mentor//)
 
 ---
 
@@ -34,4 +34,4 @@ Voici ma solution pour le challenge "Designo multi-page website" !
 
 ## 📜 Dépôt GitHub
 
-[Voir ce dépôt](https://github.com/sayaka68/designo/tree/main)
+[Voir ce dépôt](https://github.com/sayaka68/Designo-multi-page-website--Frontend-Mentor)
