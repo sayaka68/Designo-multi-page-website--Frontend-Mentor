@@ -58,6 +58,7 @@
   @include global.mq(lg) {
     width: 540px;
     margin-top: 80px;
+    flex-shrink: 0;
   }
 }
 
@@ -74,6 +75,6 @@
 
 .p-contact__form {
   @include global.mq(lg) {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
   }
 }
